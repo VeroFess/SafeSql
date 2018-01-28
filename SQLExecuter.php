@@ -167,8 +167,6 @@ class SQLExecuter{
             }
         }
 
-        var_dump($SQLCommand, $QueryDataArray);
-
         $sth = self::$dbh->prepare($SQLCommand);
         $sth->execute($QueryDataArray);
 
