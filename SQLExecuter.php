@@ -93,8 +93,7 @@ class SQLExecuter{
         }
 
         if ($DataType === self::DATA_TYPE_STRING_VAL) { //字符串类型
-            $CleanData = self::$dbh->quote($Data);//用PDO::quote()来加引号
-            return array("Status"=>"STATUS_SUCCESS", "Data"=>(array("K"=>$Name, "V"=>$CleanData)));
+            return array("Status"=>"STATUS_SUCCESS", "Data"=>(array("K"=>$Name, "V"=>$Data)));
         }
 
         if ($DataType === self::DATA_TYPE_BOOL_VAL) { //布尔，直接强制转换
